@@ -1,0 +1,23 @@
+/* Syling for navigation menu */
+.navigation-container {
+  height: 100%;
+  width: 100%;
+  background-color: #712e49;
+  padding: 1rem;
+}
+
+/* Styling on navigation elements */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling of logo */
+.logo-container {
+  margin-right: auto;
+}
+
+.logo {
+  width: 7rem;
+}
