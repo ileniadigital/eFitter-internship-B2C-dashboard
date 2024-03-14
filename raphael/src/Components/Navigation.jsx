@@ -7,7 +7,7 @@ export default function Navigation() {
             <nav className="navigation">
                 {/* wordmark logo */}
                 <div className="logo-container" >
-                    <img src={require("../image/eFitter_wordmark.png")} alt="eFitter logo" className='logo' />
+                    <img src={require("../image/eFitter_burgundy_wordmark.png")} alt="eFitter logo" className='logo' />
                 </div>
             </nav>
         </div>
