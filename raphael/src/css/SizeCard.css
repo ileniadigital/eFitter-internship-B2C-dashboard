@@ -10,3 +10,8 @@
   justify-content: center;
   text-align: center;
 }
+
+/* Styling of text inside card */
+.size {
+  margin-top: 2rem;
+}

@@ -4,7 +4,7 @@ export default function Sort(){
     return (
         <div className="brandsMenu-container">
             <select className="brands">
-                <option value="none" selected disabled hidden>Sort</option> 
+                <option value="" default id="defaultOption">Sort</option> 
                 {/* Make this an array from pulled data */}
                 <option value="az">A-Z</option>
                 <option value="za">Z-A</option>
