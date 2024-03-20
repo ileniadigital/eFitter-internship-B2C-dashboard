@@ -28,6 +28,6 @@
       "**/*.tsx",
       ".next/types/**/*.ts",
       "./dist/types/**/*.ts"
-    ],
+, "raphael/src/Components/Navigation.jsx"    ],
     "exclude": ["node_modules"]
   }

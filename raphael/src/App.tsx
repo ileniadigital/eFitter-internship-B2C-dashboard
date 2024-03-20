@@ -6,8 +6,7 @@ import Welcome from "./Components/Welcome";
 import BrandsMenu from './Components/BrandsMenu';
 import Sizes from './Components/Sizes';
 import StyleGuru from './Components/StyleGuru';
-import Filter from './Components/Filter';
-import Sort from './Components/Sort';
+import MaterialsGlossary from './Components/MaterialsGlossary';
 
 export default function App() {
   return (
@@ -23,8 +22,7 @@ export default function App() {
       {/* Style Guru */}
       <StyleGuru />
       {/* Materials Glossary */}
-      <Sort />
-      <Filter />
+      <MaterialsGlossary />
     </div>
   );
 }
