@@ -1,9 +1,9 @@
-import '../css/Dropdown.css'; //Import CSS styling
+import styles from './dropdown.module.css'; //Import CSS styling
 //Drop down menu of supported brands
 export default function Sort(){
     return (
-        <div className="brandsMenu-container">
-            <select className="brands">
+        <div className={styles.brandsMenucontainer}>
+            <select className={styles.brands}>
                 <option value="" default id="defaultOption">Sort</option> 
                 {/* Make this an array from pulled data */}
                 <option value="az">A-Z</option>

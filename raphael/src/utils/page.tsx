@@ -1,5 +1,5 @@
-import '../../Components/general.css'
-import { ClientOnly } from './client'
+import '../../css/general.css'
+import { ClientOnly } from '../../css/client'
 
 export function generateStaticParams() {
     return [{ slug: [''] }]

@@ -1,14 +1,14 @@
-import '../css/StyleGuru.css'; //Import CSS styling
+import styles from './style-guru.module.css'; //Import CSS styling
 //Style Guru Persona component
 export default function StyleGuru(){
     let stylegurupersona = "Free Spirit";
     return(
-        <div className="styleGuru-container">
+        <div className={styles.styleGurucontainer}>
             <h3>Style Guru Persona</h3>
-            <div className="toggle-container">
+            <div className={styles.toggleContainer}>
                 <h2>{stylegurupersona}</h2>
                 {/* toggle goes here */}
-                <button className="styleGuru-toggle">TOGGLE ICON</button>
+                <button className={styles.styleGurutoggle}>TOGGLE ICON</button>
             </div>
             <p>Newsletter goes here</p>
             

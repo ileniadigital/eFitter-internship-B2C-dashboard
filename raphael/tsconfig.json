@@ -28,7 +28,7 @@
     "./dist/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/Components/Navigation.jsx"  ],
+, "src/Components/navigation/navigation.jsx"  ],
   "exclude": [
     "node_modules"
   ]
