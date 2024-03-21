@@ -1,0 +1,19 @@
+/* Styling of search icon */
+
+/* Styling of search box */
+#search {
+  border-radius: 0.625rem;
+  background: #fff;
+  width: 20rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+#search ::placeholder {
+  color: #712e49;
+  font-family: "DM Sans";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
