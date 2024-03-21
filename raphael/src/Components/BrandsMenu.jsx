@@ -5,6 +5,7 @@ export default function BrandsMenu(){
         <div className="brandsMenu-container">
             <select className="brands">
                 {/* Make this an array from pulled data */}
+                <option value="brand-item" default id="defaultOption">Select a brand</option>
                 <option value="brand-item">Zara</option>
                 <option value="brand-item">H&M</option>
             </select>

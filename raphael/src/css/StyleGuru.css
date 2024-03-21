@@ -1,0 +1,13 @@
+/* Styling for toggle container and style persona */
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Styling for toggle button */
+.styleGuru-toggle {
+  background-color: transparent;
+  color: #712e49;
+  border: none;
+}

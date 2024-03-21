@@ -1,16 +1,14 @@
-
-import './css/reset.css'; 
-import './css/general.css'; 
+import './css/reset.css';
+import './css/general.css';
 //Import components
 import Navigation from "./Components/Navigation";
 import Welcome from "./Components/Welcome";
 import BrandsMenu from './Components/BrandsMenu';
 import Sizes from './Components/Sizes';
 import StyleGuru from './Components/StyleGuru';
-import Filter from './Components/Filter';
-import Sort from './Components/Sort';
+import MaterialsGlossary from './Components/MaterialsGlossary';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       {/* Render navigation bar */}
@@ -18,16 +16,13 @@ function App() {
       {/* Render welcome message */}
       <Welcome />
       {/* Render dropdown menu with brands */}
-      <BrandsMenu/>
+      <BrandsMenu />
       {/* Render size cards for each category */}
-      <Sizes/>
+      <Sizes />
       {/* Style Guru */}
-      <StyleGuru/>
+      <StyleGuru />
       {/* Materials Glossary */}
-      <Sort/>
-      <Filter/>
+      <MaterialsGlossary />
     </div>
   );
 }
-
-export default App;
