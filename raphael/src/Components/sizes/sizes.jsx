@@ -1,9 +1,9 @@
-import '../css/Sizes.css'; //Import CSS styling
+import styles from './sizes.module.css'; //Import CSS styling
 //Import components
-import SizeCard from './SizeCard';
+import SizeCard from '../size-card/size-card';
 export default function Sizes() {
     return(
-        <div className="size-cards">
+        <div className={styles.sizeCards}>
             <SizeCard category={"Tops"}/>
             <SizeCard category={"Bottoms"}/>
             <SizeCard category={"One-pieces"}/>

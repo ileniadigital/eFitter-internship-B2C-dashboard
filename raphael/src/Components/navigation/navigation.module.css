@@ -1,5 +1,5 @@
 /* Syling for navigation menu */
-.navigation-container {
+.navigationContainer {
   height: 100%;
   width: 100%;
   padding: 0.75rem 0 0.75rem 0.75rem;
@@ -13,7 +13,7 @@
 }
 
 /* Styling of logo */
-.logo-container {
+.logoContainer {
   margin-right: auto;
 }
 
