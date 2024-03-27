@@ -15,9 +15,13 @@
   font-weight: bold;
 }
 
+.optionsContainer #defaultOption option {
+  color: #712e49;
+  background-color: red;
+}
+
 .options:hover {
   color: #712e49;
-  background: transparent;
 }
 /* 
 select {
