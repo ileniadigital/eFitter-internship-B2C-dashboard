@@ -1,6 +1,8 @@
-// import styles from './search-bar.module.css'; // Import CSS styling
-// import { useRouter } from "next/router"; // Import router from next.js
-// import { useState, ChangeEvent } from "react";
+import styles from './search-bar.module.css'; // Import CSS styling
+import { useRouter } from "next/router"; // Import router from next.js
+import { useState, ChangeEvent } from "react";
+
+import { BiSearch } from "react-icons/bi";
 
 // interface iDefault {
 //     defaultValue: string | null;
@@ -32,19 +34,19 @@
 //             handleSearch();
 //         }
 //     }
-
-//     return (
-//         <div className={styles.searchBarContainer}>
-//             <label htmlFor="inputId">searchIcon</label>
-//             <input
-//                 type="text"
-//                 id="inputID"
-//                 placeholder="Search for a material"
-//                 value={inputValue ?? ""}
-//                 onChange={handleChange}
-//                 onKeyDown={handleKeyPress}
-//                 className={styles.search} // Use styles from CSS module
-//             />
-//         </div>
-//     );
-// }
+export default function SearchBar() {
+    return (
+        <div className={styles.searchBarContainer}>
+            <label htmlFor="inputId" className={styles.iconContainer}><BiSearch className={styles.searchIcon} /></label>
+            <input
+                type="text"
+                id="inputID"
+                placeholder="Search for a material "
+                // value={inputValue ?? ""}
+                // onChange={handleChange}
+                // onKeyDown={handleKeyPress}
+                className={styles.search} // Use styles from CSS module
+            />
+        </div>
+    );
+}

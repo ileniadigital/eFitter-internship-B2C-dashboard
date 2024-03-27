@@ -1,7 +1,7 @@
 import styles from './materials-glossary.module.css'; //Import CSS styling
 
 // Import components
-import {SearchBar} from '../search-bar/search-bar';
+import SearchBar from '../search-bar/search-bar';
 import DropDown from '../drop-down/drop-down';
 
 export default function MaterialsComposition(){
@@ -10,7 +10,7 @@ export default function MaterialsComposition(){
             <h1>Materials Glossary🧵</h1>
             <div className={styles.searchcontainer}>
                 {/* Search bar */}
-                {/* <SearchBar defaultValue={null}/> */}
+                <SearchBar/>
                 <DropDown options={['A-Z', 'Z-A', 'Water Consumption', 'Carbon Footprint']} defaultOption={'Sort'}/>
                 <DropDown  options={['Man-made', 'Natural']} defaultOption={'Filter'}/>
             </div>

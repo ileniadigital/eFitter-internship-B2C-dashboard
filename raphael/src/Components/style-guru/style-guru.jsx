@@ -1,16 +1,23 @@
 import styles from './style-guru.module.css'; //Import CSS styling
+import { MdArrowDropDownCircle } from "react-icons/md";
 //Style Guru Persona component
 export default function StyleGuru(){
     let stylegurupersona = "Free Spirit";
     return(
         <div className={styles.styleGurucontainer}>
-            <h3>Style Guru Persona</h3>
-            <div className={styles.toggleContainer}>
-                <h2>{stylegurupersona}</h2>
-                {/* toggle goes here */}
-                <button className={styles.styleGurutoggle}>TOGGLE ICON</button>
+            <div className={styles.personaContainer}>
+                <h3 className={styles.persona}>Style Guru Persona</h3>
             </div>
-            <p>Newsletter goes here</p>
+            <div className={styles.arrowContainer}>
+                {/* Style Guru Persona */}
+                <h2>{stylegurupersona}</h2>
+                {/* Drop Down Menu */}
+                <button className={styles.styleGuruarrow}><MdArrowDropDownCircle size={30} /></button>
+            </div>
+            {/* Newsletter */}
+            <div className={styles.newsletter}>
+                <p>Newsletter goes here</p>
+            </div>
             
         </div>
     );

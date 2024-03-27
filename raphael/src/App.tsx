@@ -9,7 +9,7 @@ import MaterialsGlossary from './Components/materials-glossary/materials-glossar
 import { useEffect, useState } from 'react';
 
 // Import data
-import materialsData from './data/brands.json';
+import brandsData from './data/brands.json';
 
 export default function App() {
   // State to store the options
@@ -17,24 +17,42 @@ export default function App() {
 
   useEffect(() => {
     // Extract brand names from materialsData array
-    const brandNames = materialsData.map(item => item.name);
+    const brandNames = brandsData.map(item => item.name);
     setOptions(brandNames);
   }, []);
 
   return (
     <div className="App">
       {/* Render navigation bar */}
-      <Navigation />
-      {/* Render welcome message */}
-      <Welcome />
-      {/* Render DropDown with fetched options */}
-      <DropDown options={options} defaultOption={'Select a brand'} />
-      {/* Render size cards for each category */}
-      <Sizes />
-      {/* Style Guru */}
-      <StyleGuru />
-      {/* Materials Glossary */}
-      <MaterialsGlossary />
+      <div className='navigation'>
+        <Navigation />
+      </div>
+      <div className="content">
+        {/* Render welcome message */}
+        <div className='welcome'>
+          <Welcome />
+        </div>
+
+        {/* Render DropDown with fetched options */}
+        <div className='dropdown'>
+          <DropDown options={options} defaultOption={'Select a brand'} />
+        </div>
+
+        {/* Render size cards for each category */}
+        <div className='sizes'>
+          <Sizes />
+        </div>
+
+        {/* Style Guru */}
+        <div className='styleguru'>
+          <StyleGuru />
+        </div>
+
+        {/* Materials Glossary */}
+        <div className='materials-glossary'>
+          <MaterialsGlossary />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,12 +1,23 @@
+/* Styling for search bar */
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 /* Styling of search icon */
-
+.searchIcon {
+  color: #712e49;
+  font-size: 3rem;
+}
 /* Styling of search box */
-#search {
-  border-radius: 0.625rem;
+.search {
+  border-radius: 0.9rem;
   background: #fff;
   width: 20rem;
   height: 2.5rem;
   flex-shrink: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 #search ::placeholder {
