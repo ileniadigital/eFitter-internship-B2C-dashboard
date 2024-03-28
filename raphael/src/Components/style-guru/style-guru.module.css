@@ -21,3 +21,7 @@
 .persona {
   font-size: 2rem;
 }
+
+.rotated {
+  transform: rotate(180deg);
+}
