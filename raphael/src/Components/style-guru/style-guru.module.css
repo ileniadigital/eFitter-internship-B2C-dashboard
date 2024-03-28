@@ -1,13 +1,27 @@
-/* Styling for toggle container and style persona */
-.toggleContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+/* Styling for style guru container */
+.styleGurucontainer div {
+  margin-bottom: 2rem;
 }
 
-/* Styling for toggle button */
-.styleGurutoggle {
+/* Styling for drop down arrow container and style persona */
+.arrowContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+/* Styling for drop down arrow button */
+.styleGuruarrow {
   background-color: transparent;
-  color: #712e49;
   border: none;
+  color: #712e49;
+}
+
+/* Styling for persona */
+.persona {
+  font-size: 2rem;
+}
+
+.rotated {
+  transform: rotate(180deg);
 }
