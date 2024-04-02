@@ -1,4 +1,5 @@
-.searchcontainer {
+.searchcontainer,
+.dropdownContainer {
   display: flex;
   flex-direction: row;
   gap: 5rem;
