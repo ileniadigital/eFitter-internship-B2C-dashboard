@@ -36,7 +36,7 @@ class SizeRecommendation(models.Model):
 
 class ProductComposition(models.Model):
     name = models.CharField(max_length=100)
-    composition_type = models.CharField(max_length=50)  # Man-made or Natural
+    type = models.CharField(max_length=50)  # Man-made or Natural
     description = models.TextField()
     water_usage = models.FloatField()
     carbon_footprint = models.FloatField()
