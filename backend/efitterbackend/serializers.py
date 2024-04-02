@@ -49,4 +49,4 @@ class ProductCompositionSerializer(serializers.ModelSerializer):
 class StyleGuruPersonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = StyleGuruPersona
-        fields = ['id', 'name', 'description']
+        fields = ['id', 'name', 'description','link']

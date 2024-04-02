@@ -44,3 +44,4 @@ class ProductComposition(models.Model):
 class StyleGuruPersona(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    link = models.URLField(max_length=500, default='www.example.com')
