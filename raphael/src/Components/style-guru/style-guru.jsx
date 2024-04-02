@@ -20,12 +20,13 @@ export default function StyleGuru() {
     return (
         <div className={styles.styleGurucontainer}>
             <div className={styles.personaContainer}>
-                <h3 className={styles.persona}>Style Guru Persona</h3>
+                <h3 className={styles.persona}>Style Guru Persona🧥</h3>
             </div>
             <div className={styles.arrowContainer}>
                 {/* Style Guru Persona */}
                 <h2>{stylegurupersona}</h2>
                 {
+                    // Rotate arrow icon when newsletter is open
                     newsletterOpen ? (
                         <button className={`${styles.styleGuruarrow} ${styles.rotated}`} onClick={toggleNewsletter}>
                             <MdArrowDropDownCircle size={30} />
@@ -41,6 +42,7 @@ export default function StyleGuru() {
             {newsletterOpen && (
                 <div className={styles.newsletter}>
                     <iframe src="https://mailchi.mp/4bd9bb778041/xn06nty4jb-9376554" width="100%" height="500" frameBorder="0" scrolling="yes"></iframe>
+                    {/* Testing with image and link first */}
                     {/* <a href='https://mailchi.mp/4bd9bb778041/xn06nty4jb-9376554'></a> */}
                     {/* <img src={newsletter.src} alt="placeholder" /> */}
                 </div>

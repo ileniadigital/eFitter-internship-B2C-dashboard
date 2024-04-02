@@ -8,7 +8,7 @@ import { fetchProductCompositions } from '../../data/api';
 export default function MaterialsDisplay() {
     const [materials, setMaterials] = useState([]);
 
-    // Fetch retailers data from the API
+    // Fetch materials data from the API
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -20,15 +20,17 @@ export default function MaterialsDisplay() {
         fetchData();
     }, []);
 
-    const options = materials.map((material) => (material.name));
+    const options = materials.map((material) => ({ name: material.name, description: material.description }));
     console.log(options);
 
     return (
         <div className={styles.materialsContainer}>
-            <h1>Materials Display</h1>
-            <ul>
+            <ul className={styles.list}>
                 {options.map((option, index) => (
-                    <li key={index}>{option}</li>
+                    <li className={styles.brand} key={index}>
+                        <div className={styles.name}>{option.name}</div>
+                        <div className={styles.description}>{option.description}</div>
+                    </li>
                 ))}
             </ul>
         </div>
