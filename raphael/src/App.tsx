@@ -9,17 +9,25 @@ import MaterialsGlossary from './Components/materials-glossary/materials-glossar
 import { useEffect, useState } from 'react';
 
 // Import data
-import brandsData from './data/brands.json';
+import { fetchRetailers } from './data/api';
 
 export default function App() {
   // State to store the options
-  const [options, setOptions] = useState([]);
+  const [retailers, setRetailers] = useState([]);
 
+  // Fetch retailers data from the API
   useEffect(() => {
-    // Extract brand names from materialsData array
-    const brandNames = brandsData.map(item => item.name);
-    setOptions(brandNames);
+    const fetchData = async () => {
+      try {
+        const data = await fetchRetailers();
+        setRetailers(data);
+      } catch (error) {
+      }
+    };
+    fetchData();
   }, []);
+
+  const options = retailers.map((retailer) => (retailer.name));
 
   return (
     <div className="App">

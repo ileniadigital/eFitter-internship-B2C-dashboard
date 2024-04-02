@@ -13,8 +13,10 @@ export default function MaterialsComposition(){
                 <div className={styles.searchcontainer}>
                     {/* Search bar */}
                     <SearchBar/>
-                    <DropDown options={['A-Z', 'Z-A', 'Water Consumption', 'Carbon Footprint']} defaultOption={'Sort'}/>
-                    <DropDown  options={['Man-made', 'Natural']} defaultOption={'Filter'}/>
+                    <div className={styles.dropdownContainer}>
+                        <DropDown options={['A-Z', 'Z-A', 'Water Consumption', 'Carbon Footprint']} defaultOption={'Sort'}/>
+                        <DropDown  options={['Man-made', 'Natural']} defaultOption={'Filter'}/>
+                    </div>
                 </div>
                 <MaterialsDisplay/>
             </div>
