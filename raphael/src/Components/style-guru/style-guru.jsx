@@ -40,7 +40,7 @@ export default function StyleGuru() {
             {/* Newsletter */}
             {newsletterOpen && (
                 <div className={styles.newsletter}>
-                    <iframe src="https://mailchi.mp/4bd9bb778041/xn06nty4jb-9376554" width="100%" height="500" frameBorder="0" scrolling="no"></iframe>
+                    <iframe src="https://mailchi.mp/4bd9bb778041/xn06nty4jb-9376554" width="100%" height="500" frameBorder="0" scrolling="yes"></iframe>
                     {/* <a href='https://mailchi.mp/4bd9bb778041/xn06nty4jb-9376554'></a> */}
                     {/* <img src={newsletter.src} alt="placeholder" /> */}
                 </div>
