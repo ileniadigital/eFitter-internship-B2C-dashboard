@@ -1,38 +1,17 @@
-import styles from './materials-display.module.css'; //Importing CSS file
-import { useEffect, useState } from 'react';
+import React from 'react';
+import styles from './materials-display.module.css';
 
-// Import data
-import { fetchProductCompositions } from '../../data/api';
-
-//MaterialsDisplay component to display materials 
-export default function MaterialsDisplay() {
-    const [materials, setMaterials] = useState([]);
-
-    // Fetch materials data from the API
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await fetchProductCompositions();
-                setMaterials(data);
-            } catch (error) {
-            }
-        };
-        fetchData();
-    }, []);
-
-    const options = materials.map((material) => ({ name: material.name, description: material.description }));
-    console.log(options);
-
+export default function MaterialsDisplay({ materials }) {
     return (
         <div className={styles.materialsContainer}>
             <ul className={styles.list}>
-                {options.map((option, index) => (
+                {materials.map((material, index) => (
                     <li className={styles.brand} key={index}>
-                        <div className={styles.name}>{option.name}</div>
-                        <div className={styles.description}>{option.description}</div>
+                        <div className={styles.name}>{material.name}</div>
+                        <div className={styles.description}>{material.description}</div>
                     </li>
                 ))}
             </ul>
         </div>
-    )
+    );
 }
