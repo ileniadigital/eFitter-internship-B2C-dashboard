@@ -28,3 +28,10 @@
 .name {
   font-weight: bold;
 }
+
+/* Styling for error message */
+.error {
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 1rem;
+}
