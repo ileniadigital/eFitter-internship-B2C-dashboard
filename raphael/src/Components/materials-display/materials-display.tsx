@@ -1,36 +1,23 @@
-import styles from './materials-display.module.css'; //Importing CSS file
-import { useEffect, useState } from 'react';
+import React from 'react';
+import styles from './materials-display.module.css'; //Import styling
 
-// Import data
-import { fetchProductCompositions } from '../../data/api';
-
-//MaterialsDisplay component to display materials 
-export default function MaterialsDisplay() {
-    const [materials, setMaterials] = useState([]);
-
-    // Fetch retailers data from the API
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await fetchProductCompositions();
-                setMaterials(data);
-            } catch (error) {
-            }
-        };
-        fetchData();
-    }, []);
-
-    const options = materials.map((material) => (material.name));
-    console.log(options);
-
+// Materials display component
+//Display the materials
+export default function MaterialsDisplay({ materials }) {
     return (
         <div className={styles.materialsContainer}>
-            <h1>Materials Display</h1>
-            <ul>
-                {options.map((option, index) => (
-                    <li key={index}>{option}</li>
-                ))}
-            </ul>
+            {materials.length > 0 ? (
+                <ul className={styles.list}>
+                    {materials.map((material, index) => (
+                        <li className={styles.brand} key={index}>
+                            <div className={styles.name}>{material.name}</div>
+                            <div className={styles.description}>{material.description}</div>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p className={styles.error}>No materials found</p>
+            )}
         </div>
-    )
+    );
 }
