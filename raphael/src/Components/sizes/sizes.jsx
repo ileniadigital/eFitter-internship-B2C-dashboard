@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 //Import data
 import { fetchCategories } from '../../data/api';
 
-export default function Sizes() {
+// Sizes component that displays the size cards
+export default function Sizes({selectedBrand}) {
     // Fetch categories data from the API
     const [categories, setCategories] = useState([]);
     useEffect(() => {
@@ -21,7 +22,7 @@ export default function Sizes() {
     }, []);
 
     const options = categories.map((category) => (category.name));
-    console.log(options);
+    
     return(
         <div className={styles.sizeCards}>
             {options.map((category) => (

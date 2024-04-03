@@ -38,6 +38,7 @@ export default function MaterialsComposition() {
         }
     };
 
+    // Filters
     useEffect(() => {
         let filtered = [...materials];
     
