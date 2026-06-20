@@ -1,17 +1,16 @@
 """
 WSGI config for efitterbackend project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 """
-
 import os
+import sys
+from pathlib import Path
+
+# Make sure the project root (the folder containing this 'efitterbackend'
+# package) is importable, regardless of Vercel's working directory.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'efitterbackend.settings')
 
 application = get_wsgi_application()
-app=application
