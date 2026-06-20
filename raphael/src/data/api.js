@@ -1,7 +1,9 @@
+// URL base
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
 // Fetch retailers
 export const fetchRetailers = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/retailers/?format=json');
+      const response = await fetch(`${API_BASE_URL}/retailers/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch retailers');
       }
@@ -16,7 +18,7 @@ export const fetchRetailers = async () => {
   // Fetch user profiles
   export const fetchUserProfiles = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/userprofiles/?format=json');
+      const response = await fetch(`${API_BASE_URL}/userprofiles/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch user profiles');
       }
@@ -31,7 +33,7 @@ export const fetchRetailers = async () => {
   // Fetch categories
   export const fetchCategories = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/categories/?format=json');
+      const response = await fetch(`${API_BASE_URL}/categories/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch categories');
       }
@@ -46,7 +48,7 @@ export const fetchRetailers = async () => {
   // Fetch extracted purchase informations
   export const fetchExtractedPurchaseInformations = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/extractedpurchaseinformations/?format=json');
+      const response = await fetch(`${API_BASE_URL}/extractedpurchaseinformations/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch extracted purchase informations');
       }
@@ -61,7 +63,7 @@ export const fetchRetailers = async () => {
   // Fetch size recommendations
   export const fetchSizeRecommendations = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/sizerecommendations/?format=json');
+      const response = await fetch(`${API_BASE_URL}/sizerecommendations/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch size recommendations');
       }
@@ -76,7 +78,7 @@ export const fetchRetailers = async () => {
   // Fetch product compositions
   export const fetchProductCompositions = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/productcompositions/?format=json');
+      const response = await fetch(`${API_BASE_URL}/productcompositions/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch product compositions');
       }
@@ -91,7 +93,7 @@ export const fetchRetailers = async () => {
   // Fetch Style Guru personas
   export const fetchStyleGuruPersonas = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/stylegurupersonas/?format=json');
+      const response = await fetch(`${API_BASE_URL}/stylegurupersonas/?format=json`);
       if (!response.ok) {
         throw new Error('Failed to fetch Style Guru personas');
       }
